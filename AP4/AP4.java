@@ -14,7 +14,8 @@ public class AP4 {
             + " and by opposing end them?";
         int spaces = 0, vowels = 0, letters = 0;
         //YOUR CODE HERE
-        System.out.println("The text contained\nvowels: " + vowels + "\ncharacters: " + characters + "\nspaces: " + spaces);
+        System.out.println("The text contained\nvowels: " +
+            vowels + "\ncharacters: " + characters + "\nspaces: " + spaces);
     }
 }
 */
@@ -40,6 +41,7 @@ public class AP4 {
             else characters += 1;
         }
     
-        System.out.println("The text contained\nvowels: " + vowels + "\ncharacters: " + characters + "\nspaces: " + spaces);
+        System.out.println("The text contained\nvowels: " +
+            vowels + "\ncharacters: " + characters + "\nspaces: " + spaces);
     }
 }
