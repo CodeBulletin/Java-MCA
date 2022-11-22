@@ -1,5 +1,4 @@
 package AP1;
-import java.util.Scanner;
 
 // Problem Statement
 // Explore the basic java program development scenario in Notepad and cmd by 
