@@ -9,6 +9,26 @@ A Financial Calculator to calculate the SimpleInterest and CompoundInterest by t
 Make another class and a function in it to perform the above task.
 */
 
+public class AP9 {
+    public static void main(String[] args) {
+
+        Double[] argsD = new Double[3];
+        int k = 0;
+        for (String i: args) {
+            Double j = Double.parseDouble(i);
+            argsD[k] = j;
+            k++;
+        }
+
+        Calculator calculator = new Calculator(argsD[0], argsD[1] / 100.0, argsD[2]);
+
+        System.out.println(calculator.CalculateSimpleIntrest());
+        System.out.println(calculator.CalculateCompundIntrest(4));
+        System.out.println(calculator.CalculateSimpleFinalValue());
+        System.out.println(calculator.CalculateCompoundFinalValue(4));
+    }
+}
+
 class Calculator {
     public double p, r, t; 
 
@@ -30,25 +50,5 @@ class Calculator {
 
     public double CalculateCompoundFinalValue(double n) {
         return CalculateCompundIntrest(n) + p;
-    }
-}
-
-public class AP9 {
-    public static void main(String[] args) {
-
-        Double[] argsD = new Double[3];
-        int k = 0;
-        for (String i: args) {
-            Double j = Double.parseDouble(i);
-            argsD[k] = j;
-            k++;
-        }
-
-        Calculator calculator = new Calculator(argsD[0], argsD[1] / 100.0, argsD[2]);
-
-        System.out.println(calculator.CalculateSimpleIntrest());
-        System.out.println(calculator.CalculateCompundIntrest(4));
-        System.out.println(calculator.CalculateSimpleFinalValue());
-        System.out.println(calculator.CalculateCompoundFinalValue(4));
     }
 }
