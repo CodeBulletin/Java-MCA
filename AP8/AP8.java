@@ -1,5 +1,7 @@
 package AP8;
 
+import java.util.Scanner;
+
 // Problem Statement
 /*
 Develop an employee pay generator that works on the following rules
@@ -11,12 +13,17 @@ Develop an employee pay generator that works on the following rules
 
 public class AP8 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Eneter the hrsWorked and base pay: ");
+        float HrsWord = sc.nextFloat();
+        float BasePay = sc.nextFloat();
         try {
-            Employee e1 = new Employee(48.0f, 12.0f);
+            Employee e1 = new Employee(HrsWord, BasePay);
             System.out.println(e1.generatePayment());
         } catch (Exception e) {
             e.printStackTrace();
         }
+        sc.close();
     }
 }
 
