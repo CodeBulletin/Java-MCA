@@ -26,6 +26,6 @@ public class AP3 {
         System.out.println("88 in character: " + (char) int_to_char);
 
         float float_to_short = 1.175f;
-        System.out.println("1.175 in short: " + (short) float_to_short);
+        System.out.println("1.175f in short: " + (short) float_to_short);
     }
 }
