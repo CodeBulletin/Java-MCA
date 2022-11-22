@@ -1,3 +1,4 @@
+package AP1;
 import java.util.Scanner;
 
 // Problem Statement
@@ -9,24 +10,27 @@ import java.util.Scanner;
 // a) Perform the above code using a function and call it in main().
 // b) Make another class and a function in it to perform the above task.
 
-class AddInput {
-    public static int addInput(Scanner scanner) {
-        System.out.println("Enter the 5 nums");
-        return scanner.nextInt() + scanner.nextInt() + scanner.nextInt() + scanner.nextInt() + scanner.nextInt();
+public class AP1 {
+    public static void main(String[] args) {
+        System.out.print("Sum of arguments: ");
+        System.out.println(
+            Integer.parseInt(args[0]) +
+            Integer.parseInt(args[1]) + 
+            Integer.parseInt(args[2]) + 
+            Integer.parseInt(args[3]) + 
+            Integer.parseInt(args[4]));
+        // Doing the same thing in a class
+        System.out.println(AddInput.addInput(args));
     }
 }
 
-public class AP1 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-
-        System.out.println("Enter the 5 nums");
-        System.out.println(scanner.nextInt() + scanner.nextInt() + scanner.nextInt() + scanner.nextInt() + scanner.nextInt());
-
-        // Doing the same thing in a class
-        System.out.println(AddInput.addInput(scanner));
-
-        scanner.close();
+class AddInput {
+    public static int addInput(String[] args) {
+        System.out.print("Sum of arguments in class: ");
+        return Integer.parseInt(args[0]) + 
+            Integer.parseInt(args[1]) + 
+            Integer.parseInt(args[2]) + 
+            Integer.parseInt(args[3]) + 
+            Integer.parseInt(args[4]);
     }
 }

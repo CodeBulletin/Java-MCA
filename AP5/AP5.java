@@ -35,7 +35,6 @@ public class AP5 {
             printarr(array);
             return;
         }
-
         for (int i = 0; i < size; i++) {
             perms(array, size - 1);
             if (size % 2 == 1) {
