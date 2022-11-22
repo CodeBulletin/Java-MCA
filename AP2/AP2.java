@@ -15,6 +15,7 @@ public class AP2 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the number: ");
         System.out.println(count_resiprocal(scanner.nextInt()));
         scanner.close();
     } 
