@@ -14,18 +14,18 @@ checking output in the following cases:-
 public class AP3 {
     public static void main(String[] args) {
         int int_to_byte = 1000;
-        System.out.println((byte) int_to_byte);
+        System.out.println("1000 in byte: " + (byte) int_to_byte);
 
         double double_to_int = 12.93e3 + 0.5;
-        System.out.println((int) double_to_int);
+        System.out.println("12.93e3 + 0.5 in int: " + (int) double_to_int);
 
         double double_to_byte = 1.15;
-        System.out.println((byte) double_to_byte);
+        System.out.println("1.15 in byte: " + (byte) double_to_byte);
 
         int int_to_char = 88;
-        System.out.println((char) int_to_char);
+        System.out.println("88 in character: " + (char) int_to_char);
 
         float float_to_short = 1.175f;
-        System.out.println((short) float_to_short);
+        System.out.println("1.175 in short: " + (short) float_to_short);
     }
 }
