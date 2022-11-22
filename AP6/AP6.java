@@ -33,6 +33,7 @@ class Box {
     }
 
     public String toString() {
-        return String.format("Volume of Box(l: %f, b: %f, h: %f) = %f", l, b, h, volume());
+        return String.format("Volume of Box(l: %f, b: %f, h: %f) = %f",
+            l, b, h, volume());
     }
 }
