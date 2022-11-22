@@ -9,6 +9,17 @@ Develop an employee pay generator that works on the following rules
     4. If it is, print an error. If the number of hours is greater than 60, print an error message
 */
 
+public class AP8 {
+    public static void main(String[] args) {
+        try {
+            Employee e1 = new Employee(48.0f, 12.0f);
+            System.out.println(e1.generatePayment());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
 class Employee {
     public float hrsWorked = 0;
     public float basePay = 8.00f;
@@ -25,16 +36,5 @@ class Employee {
 
     public float generatePayment() {
         return Math.min(40.0f, hrsWorked) * basePay + Math.max(0.0f, hrsWorked - 40.0f) * basePay * 1.5f;
-    }
-}
-
-public class AP8 {
-    public static void main(String[] args) {
-        try {
-            Employee e1 = new Employee(48.0f, 12.0f);
-            System.out.println(e1.generatePayment());
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }
