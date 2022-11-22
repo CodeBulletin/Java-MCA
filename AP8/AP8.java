@@ -14,7 +14,7 @@ Develop an employee pay generator that works on the following rules
 public class AP8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Eneter the hrsWorked and base pay: ");
+        System.out.print("Enter the hrsWorked and base pay: ");
         float HrsWord = sc.nextFloat();
         float BasePay = sc.nextFloat();
         try {
@@ -42,6 +42,8 @@ class Employee {
     }
 
     public float generatePayment() {
-        return Math.min(40.0f, hrsWorked) * basePay + Math.max(0.0f, hrsWorked - 40.0f) * basePay * 1.5f;
+        return Math.min(40.0f, hrsWorked) * 
+            basePay + Math.max(0.0f, hrsWorked - 40.0f) * 
+            basePay * 1.5f;
     }
 }
