@@ -19,7 +19,8 @@ public class AP5 {
         i2 = scanner.nextInt();
         i3 = scanner.nextInt();
 
-        if (!(i1 >= 0 && i1 <= 9 && i2 >= 0 && i2 <= 9 && i3 >= 0 && i3 <= 9)) return false;
+        if (!(i1 >= 0 && i1 <= 9 && i2 >= 0 &&
+            i2 <= 9 && i3 >= 0 && i3 <= 9)) return false;
         return true;
     }
 
