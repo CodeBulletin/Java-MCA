@@ -22,10 +22,10 @@ public class AP9 {
 
         Calculator calculator = new Calculator(argsD[0], argsD[1] / 100.0, argsD[2]);
 
-        System.out.println(calculator.CalculateSimpleIntrest());
-        System.out.println(calculator.CalculateCompundIntrest(4));
-        System.out.println(calculator.CalculateSimpleFinalValue());
-        System.out.println(calculator.CalculateCompoundFinalValue(4));
+        System.out.println("Simple Intrest: " + calculator.CalculateSimpleIntrest());
+        System.out.println("Compound Intrest: " + calculator.CalculateCompundIntrest(4));
+        System.out.println("Simple Final value: " + calculator.CalculateSimpleFinalValue());
+        System.out.println("Compound Final valur: " + calculator.CalculateCompoundFinalValue(4));
     }
 }
 
