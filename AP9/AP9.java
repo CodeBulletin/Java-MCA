@@ -20,12 +20,17 @@ public class AP9 {
             k++;
         }
 
-        Calculator calculator = new Calculator(argsD[0], argsD[1] / 100.0, argsD[2]);
+        Calculator calculator = new Calculator(argsD[0],
+            argsD[1] / 100.0, argsD[2]);
 
-        System.out.println("Simple Intrest: " + calculator.CalculateSimpleIntrest());
-        System.out.println("Compound Intrest: " + calculator.CalculateCompundIntrest(4));
-        System.out.println("Simple Final value: " + calculator.CalculateSimpleFinalValue());
-        System.out.println("Compound Final valur: " + calculator.CalculateCompoundFinalValue(4));
+        System.out.println("Simple Intrest: " +
+            calculator.CalculateSimpleIntrest());
+        System.out.println("Compound Intrest: " +
+            calculator.CalculateCompundIntrest(4));
+        System.out.println("Simple Final value: " +
+            calculator.CalculateSimpleFinalValue());
+        System.out.println("Compound Final valur: " + 
+            calculator.CalculateCompoundFinalValue(4));
     }
 }
 
