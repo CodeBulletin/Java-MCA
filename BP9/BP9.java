@@ -1,4 +1,4 @@
-package BP5;
+package BP9;
 
 // Problem Statement
 /*
@@ -15,7 +15,7 @@ Use ragged array to provide the output given below
 1 2 3 4 5
 */
 
-public class BP5 {
+public class BP9 {
     public static void main(String[] args) {
         int n = Integer.parseInt(args[0]);
 
