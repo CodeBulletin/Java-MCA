@@ -9,14 +9,20 @@ import java.util.Scanner;
 
 public class AP2 {
     static float count_resiprocal(int curr) {
-        if (curr == 1) return 1.0f;
-        return 1.0f/curr + count_resiprocal(curr - 1);
+        if (curr == 1) {
+            System.out.print("1/1");
+            return 1.0f;
+        }
+        float rp = 1.0f/curr + count_resiprocal(curr - 1);
+        System.out.print(" + ");
+        System.out.print("1/" + curr);
+        return rp;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter the number: ");
-        System.out.println(count_resiprocal(scanner.nextInt()));
+        System.out.println(" = " + count_resiprocal(scanner.nextInt()));
         scanner.close();
     } 
 }
