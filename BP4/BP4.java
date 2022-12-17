@@ -7,7 +7,7 @@
 
 public class BP4 {
     public static final char getRandomGrade() {
-        return (char)((int)(Math.random() * 5) + 'A')
+        return (char)((int)(Math.random() * 5) + 'A');
     }
 
     public static void main(String[] args) {
