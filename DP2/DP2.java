@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 import Tokenizer.*;
 import Parser.*;
+import Exceptions.Exceptions;
 
 public class DP2 {
     public static void main(String[] args) {
@@ -21,8 +22,16 @@ public class DP2 {
                     continue;
                 double out = calculator.calculate(line);
                 System.out.printf("O %d> %s \n", i, out);
+            } catch (Exceptions.TokenException e) {
+                System.err.println("Token Error: " + e.getMessage());
+            } catch (Exceptions.ParserException e) {
+                System.err.println("Parser Error: " + e.getMessage());
+            } catch (Exceptions.EvaluationException e) {
+                System.err.println("Evaluationn Error: " + e.getMessage());
             } catch (Exception e) {
-                System.err.println(e.getMessage());
+                System.err.println(
+                    e.getClass().getSimpleName() + ": " + e.getMessage()
+                );
             }
         }
         sc.close();

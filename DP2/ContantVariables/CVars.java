@@ -1,6 +1,7 @@
 package ContantVariables;
 
 import java.util.HashMap;
+import Exceptions.Exceptions.EvaluationException;
 
 public class CVars {
     private HashMap<String, Double> variables = new HashMap<String, Double>();
@@ -12,7 +13,9 @@ public class CVars {
         variables.put("NPHI", (-Math.sqrt(5) + 1) / 2);
     }
 
-    public Double get(String key) {
-        return variables.get(key);
+    public Double get(String key) throws EvaluationException {
+        Double d =  variables.get(key);
+        if (d == null) throw new EvaluationException("Variable " + key + " does not exist");
+        return d;
     }
 }

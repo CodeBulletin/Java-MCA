@@ -1,42 +1,38 @@
-import java.util.LinkedList;
 import java.util.Scanner;
-
-import Tokenizer.*;
-import Parser.*;
 
 public class DP1 {
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-        Scanner sc = new Scanner(System.in);
-        int i = -1;
-        boolean loop = true;
-        while (loop) {
-            i += 1;
-            try {
-                System.out.print("I " + i + "> ");
-                String line = sc.nextLine();
-                if (line.trim().toLowerCase().equals("exit"))
-                    break;
-                if (line == null || line.trim().isEmpty())
-                    continue;
-                double out = calculator.calculate(line);
-                System.out.printf("O %d> %s \n", i, out);
-            } catch (Exception e) {
-                System.err.println(e.getMessage());
+        double g = 9.81;
+
+        Gravity earth = (double h, double r) -> {
+            if (h + r == 0) {
+                throw new ArithmeticException("Divide by zero");
             }
+            return g * r * r / ((h + r) * (h + r));
+        };
+        Scanner sc = new Scanner(System.in);
+
+        try {
+            System.out.print("Enter the height: ");
+            double height = sc.nextDouble();
+            System.out.print("Enter the radius: ");
+            double radius = sc.nextDouble();
+            System.out.printf(
+                "gravity at height h = %fs is %fm/s^2\n",
+                height, earth.at(height, radius)
+            );
+        } catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception:" + e.getMessage());
+        } catch (Exception e) {
+            System.out.println("Other Exception:" + e.getMessage());
+        } finally {
+            sc.close();
         }
-        sc.close();
     }
 }
 
-class Calculator {
-    Tokenizer tokenizer = Tokenizer.InitTokenizer();
-    Parser parser = new Parser();
-
-    public double calculate(String input) throws Exception {
-        tokenizer.clear();
-        LinkedList<Token> tokens = tokenizer.tokenize(input).getTokens();
-        SyntaxNode node = parser.parse(tokens);
-        return node.getValue();
-    }
+@FunctionalInterface
+interface Gravity {
+    public double at(double a, double b)
+        throws ArithmeticException;
 }
