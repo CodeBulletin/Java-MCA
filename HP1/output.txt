@@ -1,0 +1,8 @@
+Once upon a time, there was a little girl named Goldilocks. She lived in a small house in the woods with her family. (vowels: 36, consonants: 55, spaces: 22)
+One day, while exploring the forest, Goldilocks came across a house that wasn't her own. (vowels: 26, consonants: 44, spaces: 14)
+It belonged to three bears: Mama Bear, Papa Bear, and Baby Bear. Goldilocks went inside and saw three bowls of porridge on the table. (vowels: 41, consonants: 64, spaces: 23)
+She tasted the porridge from the first bowl and it was too hot. She tasted the porridge from the second bowl and it was too cold. (vowels: 35, consonants: 67, spaces: 25)
+But the porridge from the third bowl was just right. Goldilocks was so tired from her walk that she went upstairs and saw three beds. (vowels: 33, consonants: 74, spaces: 24)
+She laid down on the first bed and it was too hard. She laid down on the second bed and it was too soft. But the third bed was just right, so she fell fast asleep. (vowels: 43, consonants: 81, spaces: 35)
+When the bears came home and saw Goldilocks in their house, they were surprised. Goldilocks woke up and ran out of the house as fast as she could. (vowels: 46, consonants: 70, spaces: 27)
+She never went into someone else's house again without permission. (vowels: 25, consonants: 30, spaces: 9)
